@@ -1,0 +1,12 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.questions {
+  text-align: left;
+}
+
+label:hover {
+  cursor: pointer;
+}
