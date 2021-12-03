@@ -1,0 +1,85 @@
+// requests library
+const axios = require("axios");
+
+// your choice of HTML parser
+const cheerio = require("cheerio");
+const express = require("express");
+const fs = require("fs");
+
+const app = express();
+const port = process.env.PORT || 3000;
+const helpers = require("./helpers");
+
+app.get("/quotes", async(req, res) => {
+    let quotes=[];
+    try{
+        fs.readFile('quotes.json', async(err, data) => {
+            if (err) {
+                const { quotes: q } = await helpers();
+
+                return res.send({
+                    status: 200,
+                    data: q
+                })
+            };
+        
+            quotes = JSON.parse(data).quotes;
+
+            if(req.query.author) {
+                quotes = quotes.filter(d => d.author === author);
+            } 
+
+            if(req.query.tag) {
+                quotes = quotes.filter(d => d.tags.indexOf(req.query.tag) > 1 );
+            } 
+
+            return res.send({
+                status: 200,
+                data: quotes
+            })
+        });
+    } catch (error){
+        console.log(error)
+        res.send(error)
+    }
+});
+
+app.get("/authors", async(req, res) => {
+    let authors = [];
+    
+    try{
+        fs.readFile('authors.json', async(err, data) => {
+            if (err) {
+                if (err) {
+                    const { authors: a } = await helpers();
+    
+                    return res.send({
+                        status: 200,
+                        data: a
+                    })
+                };
+            }
+
+            authors = JSON.parse(data).authors;
+
+            if(req.query.name){
+                authors = authors.find(d => d.name === req.query.name);
+            }
+
+            return res.send({
+                status: 200,
+                count: authors.length,
+                data: authors
+            })
+        })
+    } catch (error){
+        console.log(error)
+        res.send(error)
+    }
+});
+
+app.listen(port, ()=>{
+    console.log(`App is ready at PORT ${port}`)
+})
+
+module.exports = app; 

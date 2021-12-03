@@ -1,0 +1,12 @@
+.note-form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 100%;
+  height: calc(40vh + 4px);
+  font-size: xx-large;
+  box-sizing: border-box;
+  margin-top: 4px;
+}

@@ -1,0 +1,52 @@
+{
+  "name": "devskiller-react-calendar-app-easy",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "tail.datetime": "^0.4.12",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "@types/enzyme": "^3.1.0",
+    "jest-junit": "^6.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test --ci --coverage --reporters=default --reporters=jest-junit"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/**/__stories__/",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageReporters": [
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "./src/tests/unit/",
+    "outputName": "test-results.xml"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
