@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="17" failures="0" time="20.448">
+  <testsuite name="YearNav.js component" errors="0" failures="0" skipped="0" timestamp="2021-08-11T00:53:21" time="10.463" tests="2">
+    <testcase classname="YearNav.js component is note passed as prop shown" name="YearNav.js component is note passed as prop shown" time="0.013">
+    </testcase>
+    <testcase classname="YearNav.js component is note input change parent handler invoked" name="YearNav.js component is note input change parent handler invoked" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="YearNav.js component" errors="0" failures="0" skipped="0" timestamp="2021-08-11T00:53:21" time="10.637" tests="3">
+    <testcase classname="YearNav.js component is year edit field visible on double click" name="YearNav.js component is year edit field visible on double click" time="0.013">
+    </testcase>
+    <testcase classname="YearNav.js component is year input correctly validated" name="YearNav.js component is year input correctly validated" time="0.002">
+    </testcase>
+    <testcase classname="YearNav.js component is currently selected year displayed" name="YearNav.js component is currently selected year displayed" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="MonthNav.js component" errors="0" failures="0" skipped="0" timestamp="2021-08-11T00:53:21" time="10.612" tests="3">
+    <testcase classname="MonthNav.js component dropdown month can be opened" name="MonthNav.js component dropdown month can be opened" time="0.017">
+    </testcase>
+    <testcase classname="MonthNav.js component month dropdown can be closed" name="MonthNav.js component month dropdown can be closed" time="0.009">
+    </testcase>
+    <testcase classname="MonthNav.js component displays currently selected month" name="MonthNav.js component displays currently selected month" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2021-08-11T00:53:21" time="10.857" tests="1">
+    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.08">
+    </testcase>
+  </testsuite>
+  <testsuite name="Calendar.js component" errors="0" failures="0" skipped="0" timestamp="2021-08-11T00:53:21" time="10.902" tests="4">
+    <testcase classname="Calendar.js component is day click invoking event handler" name="Calendar.js component is day click invoking event handler" time="0.027">
+    </testcase>
+    <testcase classname="Calendar.js component is returning correct days for currently selected month" name="Calendar.js component is returning correct days for currently selected month" time="0.001">
+    </testcase>
+    <testcase classname="Calendar.js component is year change handler changing date context correctly" name="Calendar.js component is year change handler changing date context correctly" time="0.011">
+    </testcase>
+    <testcase classname="Calendar.js component is month change handler changing date context correctly" name="Calendar.js component is month change handler changing date context correctly" time="0.019">
+    </testcase>
+  </testsuite>
+  <testsuite name="App.js component" errors="0" failures="0" skipped="0" timestamp="2021-08-11T00:53:21" time="10.89" tests="4">
+    <testcase classname="App.js component selected default date is today" name="App.js component selected default date is today" time="0.003">
+    </testcase>
+    <testcase classname="App.js component day click changes selected date" name="App.js component day click changes selected date" time="0.002">
+    </testcase>
+    <testcase classname="App.js component day change displays saved note" name="App.js component day change displays saved note" time="0.007">
+    </testcase>
+    <testcase classname="App.js component note input saves it for selected date" name="App.js component note input saves it for selected date" time="0.002">
+    </testcase>
+  </testsuite>
+</testsuites>
